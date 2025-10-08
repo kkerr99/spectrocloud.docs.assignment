@@ -12,7 +12,7 @@ kubectl [command] [TYPE] [NAME] [flags]
 ## Useful kubectl Pod and Container Debugging Commands
 
 ### `kubectl get pods [--namespace]` 
-Retrieves a list of all available pods and each pod's current status. You may have to specify the `namespace`
+Retrieves a list of all available pods and each pod's current status. You may need to specify the `namespace`
 
 ### `kubectl logs`
 Retrieves the logs of a specific pod. Do use this when you have to review logs or need to debug a container.
