@@ -27,7 +27,7 @@ When using kubectl to debug Kubernetes pods and containers, we recommend executi
 
 ## References
 
-- [Kubectl Quick Reference](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
+- [kubectl Quick Reference](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
 - [Pods](https://kubernetes.io/docs/concepts/workloads/pods/)
 - [Debug Pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-pods/)
 - [Containers](https://kubernetes.io/docs/concepts/containers/)
