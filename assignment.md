@@ -2,7 +2,7 @@
 
 ## What is Kubectl?
 
-The Kubernetes command line tool kubectl communicates with a Kubernetes cluster's control plane using the Kubernetes API. The Kubernetes [Command line tool (kubectl)](https://kubernetes.io/docs/reference/kubectl/) page provides an in-depth tool reference.
+The Kubernetes command line tool kubectl communicates with a Kubernetes cluster's control plane using the Kubernetes Application Programming Interface. The Kubernetes [Command line tool (kubectl)](https://kubernetes.io/docs/reference/kubectl/) page provides an in-depth tool reference.
 
 ##  Kubectl Command Syntax
 ```shell
