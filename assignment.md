@@ -1,6 +1,6 @@
-# Debugging Kubernetes Pods and Containers with Kubectl
+# Debug Kubernetes Pods and Containers with Kubectl
 
-## What is Kubectl?
+## Kubectl Overview
 
 The Kubernetes command line tool kubectl communicates with a Kubernetes cluster's control plane using the Kubernetes Application Programming Interface. The Kubernetes [Command line tool (kubectl)](https://kubernetes.io/docs/reference/kubectl/) page provides an in-depth tool reference.
 
@@ -18,7 +18,7 @@ kubectl [command] [TYPE] [NAME] [flags]
 | `kubectl exec`  | Debugs a container from the inside or explores the enviroment of the container itself. | [exec](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec) |
 | `kubectl debug`  | Creates a clone of a pod that does not terminate if an error is experienced inside the container. | [debug](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#debug) |
 
-## Debugging Kubernetes Pods and Containers with Kubectl Strategy
+## Debug Kubernetes Pods and Containers with Kubectl Strategy
 
 When using kubectl to debug Kubernetes pods and containers, we recommend executing the following commands in this order:
 1. `kubectl get pods`
