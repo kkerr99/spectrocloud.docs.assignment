@@ -1,44 +1,56 @@
-# Debugging Kubernetes Pods and Containers with kubectl
+# Debugging Kubernetes Pods and Containers with Kubectl
 
-## What is kubectl?
+## What is Kubectl?
 
-The Kubernetes command line tool `kubectl` communicates with a Kubernetes cluster's control plane using the Kubernetes API. The Kubernetes [Command line tool (kubectl)](https://kubernetes.io/docs/reference/kubectl/) page provides an in-depth tool reference.
+The Kubernetes command line tool kubectl communicates with a Kubernetes cluster's control plane using the Kubernetes API. The Kubernetes [Command line tool (kubectl)](https://kubernetes.io/docs/reference/kubectl/) page provides an in-depth tool reference.
 
-## Syntax for kubectl Commands
+##  Kubectl Command Syntax
 ```shell
 kubectl [command] [TYPE] [NAME] [flags]
 ```
 
-## Useful kubectl Pod and Container Debugging Commands
+## Useful Kubectl Pod and Container Debugging Commands (table)
 
-### `kubectl get pods [--namespace]` 
-Retrieves a list of all available pods and each pod's current status. You may need to specify the `namespace`
+| Kubectl Command | Description | Command Reference Page |
+| ----------- | ----------- | ----------- |
+| `kubectl get pods [--namespace <value>]`  | Retrieves a list of all available pods and each pod's current status. **Note:** You may need to specify the namespace value. | [get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) |
+| `kubectl logs`  | Retrieves the logs of a specific pod. Execute this command to review pod logs or debug a container. | [logs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) |
+| `kubectl exec`  | Debugs a container from the inside or explores the enviroment of the container itself. | [exec](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec) |
+| `kubectl debug`  | Creates a clone of a pod that does not terminate if an error is experienced inside the container. | [debug](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#debug) |
+
+## Useful Kubectl Pod and Container Debugging Commands (individual headings)
+
+### `kubectl get pods [--namespace <value>]` 
+Retrieves a list of all available pods and each pod's current status. **Note:** You may need to specify the namespace value.
+
+See [get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) for the complete command reference documentation.
 
 ### `kubectl logs`
-Retrieves the logs of a specific pod. Do use this when you have to review logs or need to debug a container.
+Retrieves the logs of a specific pod. Execute this command to review pod logs or debug a container.
+
+See [logs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) for the complete command reference documentation.
 
 ### `kubectl exec`
 Debugs a container from the inside or explores the enviroment of the container itself.
 
+See [exec](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec) for the complete command reference documentation.
+
 ### `kubectl debug`
-Another useful `kubectl` container debugging command. Creates a clone of a pod that does not terminate if an error is experienced inside the container.
+Creates a clone of a pod that does not terminate if an error is experienced inside the container.
 
-## Debugging Kubernetes Pods and Containers with kubectl strategy
+See [debug](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#debug) for the complete command reference documentation.
 
-When using kubectl to debug Kubernetes pods and containers, we recommend executing the following `kubectl` commands in this order:
+## Debugging Kubernetes Pods and Containers with Kubectl Strategy
+
+When using kubectl to debug Kubernetes pods and containers, we recommend executing the following commands in this order:
 1. `kubectl get pods`
 2. `kubectl logs`
-3. `kubectl exec` to explore the inside of the container and review other log files or configurations. 
+3. `kubectl exec` (to explore the inside of the container and review other log files or configurations). 
 
 # References
 
+- [Kubectl Quick Reference](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
 - [Pods](https://kubernetes.io/docs/concepts/workloads/pods/)
 - [Debug Pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-pods/)
 - [Containers](https://kubernetes.io/docs/concepts/containers/)
 - [Debug Init Containers](https://kubernetes.io/docs/tasks/debug/debug-application/debug-init-containers/)
-
-
-```shell
-kubectl get pods --namespace 
-```
-**Note:** The
